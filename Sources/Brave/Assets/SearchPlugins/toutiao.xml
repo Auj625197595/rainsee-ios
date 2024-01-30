@@ -1,0 +1,14 @@
+<SearchPlugin xmlns="http://www.mozilla.org/2006/browser/search/">
+  <ShortName>今日头条</ShortName>
+  <Description>在今日头条中搜索</Description>
+  <InputEncoding>UTF-8</InputEncoding>
+  <Image width="16" height="16">data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAiklEQVR42mP4//8/AyCAAQMABu27FgnAHTGAyFVBAEAAIBoMPQAAAAASUVORK5CYII=</Image>
+  <Url type="application/x-suggestions+json" template="https://cn.bing.com/osjson.aspx">
+    <Param name="query" value="{searchTerms}"/>
+    <Param name="language" value="{moz:locale}"/>
+  </Url>
+  <Url type="text/html" method="GET" template="https://www.toutiao.com/search/?keyword={searchTerms}">
+    <Param name="ie" value="utf-8"/>
+  </Url>
+  <SearchForm>https://www.toutiao.com</SearchForm>
+</SearchPlugin>
